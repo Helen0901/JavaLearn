@@ -11,9 +11,13 @@ public class java6 {
 	        Matcher matcher = pattern.matcher(email);
 
 	        if (matcher.matches()) {
+	        	
 	            System.out.println("メールアドレスのフォーマットが正しいです");
+	            
 	        } else {
+	        	
 	            System.out.println("メールアドレスのフォーマットが正しくないです");
+	            
 	        }
 	    }
 
