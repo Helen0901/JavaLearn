@@ -1,6 +1,6 @@
 import java.util.Scanner;
-import java.util.regex.Pattern;
 import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 public class java6 {
 	    public static void main(String[] args) {
 	        Scanner scanner = new Scanner(System.in);
@@ -16,6 +16,5 @@ public class java6 {
 	            System.out.println("メールアドレスのフォーマットが正しくないです");
 	        }
 	    }
-	}
 
 }
