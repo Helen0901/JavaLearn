@@ -1,6 +1,7 @@
 /**
  * 問題
 
+
 整数の二次元配列が与えられた場合に、その配列の対角線上にある要素の合計を計算し、出力してください。
 ここで対角線とは、配列の左上から右下にかけての要素を指します。
 二次元配列はハードコーディングされているものとします。
@@ -12,6 +13,7 @@
 出力
 対角線上の要素の合計値を出力してください
  */
+//com.ct 01パッケージ内のJavaPL 29というクラスを定義する
 package com.ct01;
 public class JavaPL29 {
 	public static void main (String[]args) {
@@ -20,9 +22,12 @@ public class JavaPL29 {
 		//初始化一個變量sum用來累加對角綫上的元素之和
 		int sum = 0;
 		
+		//配列を巡回する行
 		for (int i =0;i<array.length;i++) {
+			//対角線上の要素を加算
 			sum=sum+array[i][i];
 		}
+		//対角線上の要素の和を出力
 		System.out.println(sum);
 	}
 }
