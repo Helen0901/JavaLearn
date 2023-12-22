@@ -12,8 +12,11 @@ package com.ct01;
 
 public class JavaPL33 {
 	 public static void main(String[] args) {
+		 //整数要素を含む整数配列arrayを宣言する
 	        int[] array = {1, 0, 2, 1, 0, 1, 2, 3, 4};
+	        //配列長と同じ整数配列distancesを宣言し、各要素から最も近い0までの距離を格納する
 	        int[] distances = new int[array.length];
+	        //前の0のインデックスを表す変数を初期化します。初期値は整数の最大値の半分に設定されます。
 	        int lastZero = Integer.MAX_VALUE / 2;
 
 	        // 左から右へのスキャン
@@ -21,6 +24,7 @@ public class JavaPL33 {
 	            if (array[i] == 0) {
 	                lastZero = i;
 	            }
+	            //現在の要素から最も近い0までの距離を計算し、distances配列に格納する
 	            distances[i] = i - lastZero;
 	        }
 
@@ -30,6 +34,7 @@ public class JavaPL33 {
 	            if (array[i] == 0) {
 	                lastZero = i;
 	            }
+	            //現在の要素から最も近い0までの距離を計算し、distances配列の値を小さい値で更新します
 	            distances[i] = Math.min(distances[i], lastZero - i);
 	        }
 
