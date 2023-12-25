@@ -12,23 +12,39 @@
 
 入力された偶数の合計。
  */
+// パッケージの宣言
 package com.ct01;
+
+// Scanner クラスのインポート
 import java.util.Scanner;
+
+// Java23 クラスの宣言
 public class Java23 {
-	 public static void main(String[] args) {
-	        Scanner scanner = new Scanner(System.in);
-	        int sum = 0;
+    // メインメソッド
+    public static void main(String[] args) {
+        // ユーザー入力を受け取るための Scanner オブジェクトの作成
+        Scanner scanner = new Scanner(System.in);
+        
+        // 合計を初期化
+        int sum = 0;
 
-	        while (true) {
-	            int number = scanner.nextInt();
-	            if (number < 0) {
-	                break;
-	            }
-	            if (number % 2 == 0) {
-	                sum += number;
-	            }
-	        }
+        // 無限ループ
+        while (true) {
+            // ユーザーから整数を入力
+            int number = scanner.nextInt();
+            
+            // 入力が負の数の場合、ループを抜ける
+            if (number < 0) {
+                break;
+            }
+            
+            // 入力が偶数の場合、合計に加算
+            if (number % 2 == 0) {
+                sum += number;
+            }
+        }
 
-	        System.out.println(sum);
-	    }
+        // 合計を出力
+        System.out.println(sum);
+    }
 }
