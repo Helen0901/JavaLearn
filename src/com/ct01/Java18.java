@@ -16,15 +16,23 @@
 package com.ct01;
 
 public class Java18 {
-	public static void main(String[] args) {
+    public static void main(String[] args) {
+        // 合計を格納する変数を初期化します
         long sum = 0;
+
+        // 初期の数値を設定します
         long number = 9;
 
+        // 10回の繰り返しを行います
         for (int i = 1; i <= 10; i++) {
+            // 合計に現在の数値を加えます
             sum += number;
+
+            // 次の数値を生成します（前の数値に10を掛けて9を足す）
             number = number * 10 + 9;
         }
 
+        // 最終的な合計を出力します
         System.out.println(sum);
     }
 }

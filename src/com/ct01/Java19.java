@@ -15,19 +15,27 @@
  */
 package com.ct01;
 import java.util.Scanner;
+
 public class Java19 {
-	 public static void main(String[] args) {
-	        Scanner scanner = new Scanner(System.in);
-	        int count = 0;
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int count = 0;
 
-	        while (true) {
-	            int number = scanner.nextInt();
-	            if (number <= 0) {
-	                break;
-	            }
-	            count++;
-	        }
+        // ユーザーからの入力を無限ループで受け付けます
+        while (true) {
+            // 整数の入力をユーザーに要求します
+            int number = scanner.nextInt();
 
-	        System.out.println(count);
-	    }
+            // 入力された数が0以下の場合、ループを抜けます
+            if (number <= 0) {
+                break;
+            }
+
+            // 入力された数が0より大きい場合、カウントを増やします
+            count++;
+        }
+
+        // 入力された正の整数の個数を出力します
+        System.out.println(count);
+    }
 }

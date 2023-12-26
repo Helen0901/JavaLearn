@@ -14,23 +14,36 @@
 入力されたメールアドレスのフォーマットが合法か不合法かに基づいて、「メールアドレスのフォーマットが合法です」または
 「メールアドレスのフォーマットが不合法です」と出力します。
  */
+// パッケージの宣言
 package com.ct01;
+
+// Scannerクラスと正規表現関連のクラスのインポート
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+// クラスの定義
 public class Java15 {
-	 public static void main(String[] args) {
-	        Scanner scanner = new Scanner(System.in);
-	        String email = scanner.nextLine();
+    // メインメソッドの定義
+    public static void main(String[] args) {
+        // Scannerクラスのインスタンスを生成し、標準入力からメールアドレスの入力を受け取る
+        Scanner scanner = new Scanner(System.in);
+        String email = scanner.nextLine();
 
-	        String emailRegex = "^[\\w.-]+@[\\w.-]+\\.[\\w]{2,}$";
-	        Pattern pattern = Pattern.compile(emailRegex);
-	        Matcher matcher = pattern.matcher(email);
+        // メールアドレスの正規表現パターンを定義
+        String emailRegex = "^[\\w.-]+@[\\w.-]+\\.[\\w]{2,}$";
 
-	        if (matcher.matches()) {
-	            System.out.println("メールアドレスのフォーマットが正しいです");
-	        } else {
-	            System.out.println("メールアドレスのフォーマットが正しくないです");
-	        }
-	    }
+        // 正規表現パターンをコンパイルしてPatternオブジェクトを生成
+        Pattern pattern = Pattern.compile(emailRegex);
+
+        // メールアドレスとパターンを照合するMatcherオブジェクトを生成
+        Matcher matcher = pattern.matcher(email);
+
+        // メールアドレスのフォーマットが正しいかどうかを判定し、結果を出力する
+        if (matcher.matches()) {
+            System.out.println("メールアドレスのフォーマットが正しいです");
+        } else {
+            System.out.println("メールアドレスのフォーマットが正しくないです");
+        }
+    }
 }

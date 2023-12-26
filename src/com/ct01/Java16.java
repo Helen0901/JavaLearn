@@ -12,13 +12,21 @@
 
 対応する季節。
  */
+// パッケージの宣言
 package com.ct01;
+
+// Scannerクラスのインポート
 import java.util.Scanner;
+
+// クラスの定義
 public class Java16 {
-	public static void main(String[] args) {
+    // メインメソッドの定義
+    public static void main(String[] args) {
+        // Scannerクラスのインスタンスを生成し、標準入力から月の入力を受け取る
         Scanner scanner = new Scanner(System.in);
         int month = scanner.nextInt();
 
+        // 月に応じて季節を判定し、結果を出力する
         if (month >= 3 && month <= 5) {
             System.out.println("春");
         } else if (month >= 6 && month <= 8) {
