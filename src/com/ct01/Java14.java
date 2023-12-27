@@ -11,28 +11,40 @@
 
 「優」、「良」、「合格」、「不合格」、または「**_**」。
  */
+// パッケージの宣言
 package com.ct01;
-import java.util.Scanner;
-public class Java14 {
-	public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String grade = scanner.nextLine();
 
+// Scanner クラスを使用するためのインポート文
+import java.util.Scanner;
+
+// Java14 クラスの宣言
+public class Java14 {
+    
+    // メインメソッドの宣言
+    public static void main(String[] args) {
+        
+        // Scanner オブジェクトの生成
+        Scanner scanner = new Scanner(System.in);
+        
+        // ユーザーからの入力を受け取る変数の宣言と初期化
+        String grade = scanner.nextLine();
+        
+        // switch 文による等級判定
         switch (grade) {
             case "A":
-                System.out.println("優");
+                System.out.println("優"); // Aの場合、「優」と出力
                 break;
             case "B":
-                System.out.println("良");
+                System.out.println("良"); // Bの場合、「良」と出力
                 break;
             case "C":
-                System.out.println("合格");
+                System.out.println("合格"); // Cの場合、「合格」と出力
                 break;
             case "D":
-                System.out.println("不合格");
+                System.out.println("不合格"); // Dの場合、「不合格」と出力
                 break;
             default:
-                System.out.println("**_**");
+                System.out.println("**_**"); // それ以外の場合、「**_**」と出力
         }
     }
 }

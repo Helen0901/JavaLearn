@@ -11,21 +11,33 @@
 
 年齢に基づく分類。
  */
+// パッケージの宣言
 package com.ct01;
-import java.util.Scanner;
-public class Java13 {
-	 public static void main(String[] args) {
-	        Scanner scanner = new Scanner(System.in);
-	        int age = scanner.nextInt();
 
-	        if (age <= 12) {
-	            System.out.println("子供");
-	        } else if (age <= 19) {
-	            System.out.println("青少年");
-	        } else if (age <= 59) {
-	            System.out.println("成人");
-	        } else {
-	            System.out.println("高齢者");
-	        }
-	    }
+// Scanner クラスを使用するためのインポート文
+import java.util.Scanner;
+
+// Java13 クラスの宣言
+public class Java13 {
+	
+	// メインメソッドの宣言
+    public static void main(String[] args) {
+    	
+    	// Scanner オブジェクトの生成
+        Scanner scanner = new Scanner(System.in);
+        
+        // 年齢を受け取る変数の宣言と初期化
+        int age = scanner.nextInt();
+        
+        // 年齢による条件分岐
+        if (age <= 12) {
+            System.out.println("子供"); // 12歳以下の場合、「子供」と出力
+        } else if (age <= 19) {
+            System.out.println("青少年"); // 13歳以上19歳以下の場合、「青少年」と出力
+        } else if (age <= 59) {
+            System.out.println("成人"); // 20歳以上59歳以下の場合、「成人」と出力
+        } else {
+            System.out.println("高齢者"); // 60歳以上の場合、「高齢者」と出力
+        }
+    }
 }
