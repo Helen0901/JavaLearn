@@ -15,27 +15,22 @@ int[] result = new int[] {2, 3}
 package JavaFF;
 
 public class question62 {
-	 public static void main(String[] args) {
-		 int[] array = new int[] {1,2,3,4};
-		 int startIndex= 1;
-		 int length = 2;
-		 int[] result = subArray(array, startIndex, length);
+	public static void main (String[]args) {
+		int[] array = new int[] {1,2,3,4};
+		int startIndex = 1;
+		int length = 2;
+		int[] result = subArray(array , startIndex, length );
+		printArray(result);
+	}
+	public static int[] subArray(int[] array , int startIndex, int  length ) {
 	
-		 printArray(result);
-	 }
-	 public static int[] subArray(int[] array, int startIndex, int length){
-		 int[] result  = new int[length];
-		 
-		 for(int i=0 ; i < length; i++) {
-			
-			 result[i] = array[startIndex+i];
-	
-		 }
-		 
-		 return result;
-	 } 
-	
-	 
+			int[] result = new int[length];
+			for(int i =0; i<length;i++) {
+				
+				result[i] = array[startIndex+i];
+		}
+			return result;
+	}
 	 public static void printArray(int[] objs) {
 			if (objs == null) {
 				System.out.println("null");
@@ -52,5 +47,4 @@ public class question62 {
 			sb.append("]");
 			System.out.println(sb.toString());
 		}
-	 
 }
