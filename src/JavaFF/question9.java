@@ -7,13 +7,17 @@
 package JavaFF;
 
 public class question9 {
+	
+	public String name;
+	
 	public static void main (String[] args) {
 		int[] left = new int[] { 1, 2, 3, 4 };
 		int[] right = new int[] { 5, 6, 7, 8 };
 		int[] temp =megerArray(left,right);
-		int[] result = bubbleSort(megerArray(left,right));
+		int[] result = bubbleSort(temp);
 		printArray(result);
 	}
+	
 	public static int[] megerArray(int[] left, int[] right){
 		
 		int[] temp =  new int [left.length + right.length];
@@ -23,7 +27,7 @@ public class question9 {
 		}
 		for(int j = 0;j< right.length;j++) {
 			temp[left.length+j] = right[j];
-	}
+	    }
 		return temp;
 	}
 	public static int[] bubbleSort(int[] temp) {
