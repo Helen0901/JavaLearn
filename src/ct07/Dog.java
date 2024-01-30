@@ -4,7 +4,7 @@ public class Dog {
 
 	public String name;
 
-	private int age;
+	public int age;
 
 	public String color;
 

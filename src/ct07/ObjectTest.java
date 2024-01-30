@@ -17,6 +17,7 @@ public class ObjectTest {
 		myDog.eat();
 		Dog youDog = new Dog("tony", 2, "black");
 		System.out.println(youDog.name);
+		System.out.println(youDog.age);
 		youDog.run();
 	}
 

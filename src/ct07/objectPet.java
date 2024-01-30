@@ -1,6 +1,6 @@
 package ct07;
 
-public class objectPet1 {
+public class objectPet{
 	public static void main(String[] args) {
 		pet cat = new pet("mimi",2);
 		pet dog = new pet("dog", 5);
